@@ -1,13 +1,8 @@
-i = 1
-100.times do
-  if i%3 == 0 && i%5 != 0
-    p "Fizz"
-  elsif i%3 != 0 && i%5 == 0
-    p "Buzz"
-  elsif i%3 && i%5 == 0
-    p "FizzBuzz"
-  else
-    p i
-  end
-  i += 1
+def fizzbuzz?(i)
+  return 'FizzBuzz' if i % 15 == 0
+  return 'Fizz' if i % 5 == 0
+  return 'Buzz' if i % 3 == 0
+  i
 end
+
+(1..100).each { |i| p fizzbuzz?(i) }
